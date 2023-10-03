@@ -106,7 +106,7 @@ int sum(int arr[], int n)
     int value = 0; 
 	for(int i=0; i<= n ; i++) 
 	{	
-		value = value + i; 
+		value = value + arr[i]; 
 	
     
 	}
@@ -127,12 +127,24 @@ int sum(int arr[], int n)
  *
  */
  
-  /*
+  
 double pie(long int n){
+	  int fliper =1;
+	  
+	  float value = 0; 
+	for(int i=0; i<= n ; i++) 
+	{	
+	value = fliper*(1/ (i*2-1)); 
+	fliper= fliper*-1;
+	
+    
+	}
+	return value ;
+
     
 	
 } 
-*/
+
 
 
 /* Function: main
