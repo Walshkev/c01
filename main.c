@@ -1,8 +1,8 @@
 /****************************************
  * C-ploration 1 for CS 271
  * 
- * [NAME] $YOUR_NAME$
- * [TERM] FALL $YEAR$
+ * [NAME] Kevin Walsh
+ * [TERM] FALL 2023
  * 
  ****************************************/
 
@@ -22,7 +22,14 @@
  */
 int add(int n)
 {
-    /** Your CODE here **/
+	int value = 0; 
+	for(int i=0; i<= n ; i++) 
+	{	
+		value = value + i; 
+	
+    
+	}
+	return value ;
 }   
 
 
@@ -35,10 +42,23 @@ int add(int n)
  *
  * returns: Nth Fibonacci number
  */
+ 
 int fib(int n)
 {
-    /** Your CODE here **/
+	
+	
+    if(n==1){
+		return 1;
+	}
+	else if (n==0){
+		return 0;
+	}
+	else { 
+		return  fib(n-1) + fib(n-2);
+	}
+	
 }
+
  
  
 /* Function: max
@@ -51,10 +71,24 @@ int fib(int n)
  *
  * returns: largest value in arr
  */
+  
 int max(int arr[], int n)
 {
-    /** Your CODE here **/
+    int value = 0; 
+	for(int i=0; i<= n ; i++) 
+	{	
+		if( value< arr[i]){
+			
+			value = arr[i] ; 
+		}
+	
+    
+	}
+	return value ;
 }
+
+
+
 
 /* Function: sum
  * -------------
@@ -66,10 +100,19 @@ int max(int arr[], int n)
  *
  * returns: sum of values in arr
  */
+  
 int sum(int arr[], int n)
 {
-    /** Your CODE here **/
+    int value = 0; 
+	for(int i=0; i<= n ; i++) 
+	{	
+		value = value + i; 
+	
+    
+	}
+	return value ;
 }
+
 
 
 /* Function: pie
@@ -83,9 +126,13 @@ int sum(int arr[], int n)
  * n: number of terms to use in Leibiz formula
  *
  */
+ 
+  /*
 double pie(long int n){
-    /** Your CODE here **/
+    
+	
 } 
+*/
 
 
 /* Function: main
