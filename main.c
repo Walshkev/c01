@@ -30,7 +30,7 @@ int add(int n)
     
 	}
 	return value ;
-}   
+}    
 
 
 /* Function: fib
@@ -72,12 +72,13 @@ int fib(int n)
  * returns: largest value in arr
  */
   
-int max(int arr[], int n)
+int arr_max(int arr[], int n)
 {
-    int value = 0; 
-	for(int i=0; i<= n ; i++) 
+    int value = arr[0]; 
+	
+	for(int i=1; i< n ; i++) 
 	{	
-		if( value< arr[i]){
+		if(value< arr[i]){
 			
 			value = arr[i] ; 
 		}
@@ -129,17 +130,19 @@ int sum(int arr[], int n)
  
   
 double pie(long int n){
-	  int fliper =1;
+	int flipper =1;
 	  
-	  float value = 0; 
-	for(int i=0; i<= n ; i++) 
+	double value = 0; 
+	for(int i=1; i<= n ; i++) 
 	{	
-	value = fliper*(1/ (i*2-1)); 
-	fliper= fliper*-1;
+	value = value + (flipper * (1.0/((i*2)-1))); 
+	flipper = flipper * -1;
 	
     
 	}
-	return value ;
+	
+	return (4*value) ;
+	
 
     
 	
@@ -204,7 +207,7 @@ int main(int argc, char** argv)
         printf("Sum of the numbers is %d.\n", total);
     }else if (!strcmp(argv[1], "-max")){
         // find the largest number of the arguments
-        int biggest = max(arr, n);
+        int biggest = arr_max(arr, n);
         printf("Largest number is %d.\n", biggest);
     }else if (!strcmp(argv[1], "-pie")){ 
         // approximate PI with Leibniz
